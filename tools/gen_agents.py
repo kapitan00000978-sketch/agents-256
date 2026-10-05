@@ -102,11 +102,12 @@ def main():
     for row in ALL:
         cat, slug, name, desc, mission, rules = row
         by_cat.setdefault(cat, []).append((slug, name, desc))
-        target = os.path.join(OUT_ROOT, slug + ".md")
+        cat_dir = os.path.join(OUT_ROOT, cat)
+        os.makedirs(cat_dir, exist_ok=True)
+        target = os.path.join(cat_dir, slug + ".md")
         if os.path.exists(target):
             skipped += 1
             continue
-        os.makedirs(OUT_ROOT, exist_ok=True)
         with open(target, "w", encoding="utf-8", newline="\n") as fh:
             fh.write(render(cat, slug, name, desc, mission, rules))
         created += 1
@@ -115,7 +116,7 @@ def main():
     man = os.path.join(HERE, "_MANIFEST.md")
     with open(man, "w", encoding="utf-8", newline="\n") as fh:
         fh.write("# Agent library \u2014 256 agents\n\n")
-        fh.write("Source: `.agents/agents/<slug>.md` \u2014 one file per agent, grouped by category below.\n\n")
+        fh.write("Layout: `agents/<category>/<slug>.md` \u2014 one file per agent, grouped by category below.\n\n")
         fh.write("Total: **%d** agents in **%d** categories.\n\n" % (len(ALL), len(by_cat)))
         for cat, items in by_cat.items():
             fh.write("## %s (%d)\n\n" % (cat, len(items)))
