@@ -1,28 +1,30 @@
-# 256 Agents
+<div align="center">
 
-A library of **256 work-specialised AI agents** — one agent per kind of AI-doable work, grouped into **16 categories of 16**.
+# 🧠 256 Agents
 
-Each agent is a single Markdown file with a YAML frontmatter header (`name`, `description`, `color`, `emoji`, `vibe`) and three body sections: **Identity & Memory**, **Core Mission**, **Critical Rules You Must Follow**.
+**A library of 256 work-specialised AI agents — one for each kind of AI-doable work.**
 
-## Categories
+[![Agents](https://img.shields.io/badge/agents-256-3b82f6?style=flat-square)](#-categories)
+[![Categories](https://img.shields.io/badge/categories-16-8b5cf6?style=flat-square)](#-categories)
+[![Format](https://img.shields.io/badge/format-Markdown%20%2B%20YAML-10b981?style=flat-square)](#-agent-format)
+[![License](https://img.shields.io/badge/license-MIT-f59e0b?style=flat-square)](LICENSE)
 
-| Category | Scope |
-|---|---|
-| `code` | frontend, backend, fullstack, mobile, API, database, refactoring, code review… |
-| `ui` | UI/UX design, interaction, accessibility, design systems, prototyping… |
-| `test` | unit, integration, e2e, performance, fuzz, regression, QA… |
-| `sec` | AppSec, threat modelling, secrets, incident response, compliance… |
-| `data` | data engineering, analytics, science, warehousing, quality, modelling… |
-| `ai` | ML, LLM apps, RAG, fine-tuning, evals, prompt engineering… |
-| `ops` | DevOps, SRE, CI/CD, containers, cloud, monitoring, on-call… |
-| `doc` | technical writing, API docs, tutorials, changelogs, diagrams… |
-| `research` | web, market, user, competitive, technical, academic, data… |
-| `product` | product management, discovery, roadmap, pricing, growth… |
-| `biz` | sales, marketing, finance, legal, recruiting, operations… |
-| `creative` | copywriting, storytelling, illustration, motion, 3D, art direction… |
-| `agent` | agent architecture, tools, memory, evals, guardrails, runtime, orchestration… |
-| `self` | journaling, habits, learning, inbox, calendar, focus, decisions… |
-| `sys` | shell, dotfiles, backup, sync, drivers, networking, performance… |
-| `game` | game design, level design, gameplay, graphics, physics, balance, release… |
+</div>
 
-## Layout
+---
+
+## ✨ What is this?
+
+**256 AI agents**, each specialised to one kind of work an AI can do — writing code, reviewing security, designing UI, analysing data, running research, managing a project, editing video, tuning a game, and so on.
+
+Every agent is a single Markdown file with a YAML frontmatter header:
+
+```yaml
+---
+name: Frontend Developer
+description: Use when a user-facing web interface must be built or changed.…
+color: blue
+emoji: 💻
+vibe: Build components as small, composable units with explicit props.
+---
+```
