@@ -1,6 +1,6 @@
 # Agent library — 256 agents
 
-Source: `.agents/agents/<slug>.md` — one file per agent, grouped by category below.
+Layout: `agents/<category>/<slug>.md` — one file per agent, grouped by category below.
 
 Total: **256** agents in **16** categories.
 
